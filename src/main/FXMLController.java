@@ -48,9 +48,6 @@ public class FXMLController implements Initializable {
 		Float rightOperand = Float.parseFloat(rightOperandTextField.getText());
 		float computeResult = 0;
 
-		if (leftOperandTextField.getText().equals("") && rightOperandTextField.getText().equals("")) {
-			ResultTextField.setText("Erorr");
-		}
 			if (event.getSource() == plusButton) {
 				computeResult = lefOperand + rightOperand;
 				ResultTextField.setText(Float.toString(computeResult));
