@@ -44,22 +44,22 @@ public class FXMLController implements Initializable {
 	private void handlerButtonOperand(ActionEvent event) {
 
 		// Use double more precision
-		Float lefOperand = Float.parseFloat(leftOperandTextField.getText());
-		Float rightOperand = Float.parseFloat(rightOperandTextField.getText());
-		float computeResult = 0;
+		Double lefOperand = Double.parseDouble(leftOperandTextField.getText());
+		Double rightOperand = Double.parseDouble(rightOperandTextField.getText());
+		double computeResult = 0;
 
 			if (event.getSource() == plusButton) {
 				computeResult = lefOperand + rightOperand;
-				ResultTextField.setText(Float.toString(computeResult));
+				ResultTextField.setText(Double.toString(computeResult));
 			} else if (event.getSource() == minusButton) {
 				computeResult = lefOperand - rightOperand;
-				ResultTextField.setText(Float.toString(computeResult));
+				ResultTextField.setText(Double.toString(computeResult));
 			} else if (event.getSource() == multipleButton) {
 				computeResult = lefOperand * rightOperand;
-				ResultTextField.setText(Float.toString(computeResult));
+				ResultTextField.setText(Double.toString(computeResult));
 			} else if (event.getSource() == divisionButton) {
 				computeResult = lefOperand / rightOperand;
-				ResultTextField.setText(Float.toString(computeResult));
+				ResultTextField.setText(Double.toString(computeResult));
 			}
 
 	}
