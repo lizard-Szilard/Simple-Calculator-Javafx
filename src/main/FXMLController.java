@@ -44,23 +44,31 @@ public class FXMLController implements Initializable {
 	private void handlerButtonOperand(ActionEvent event) {
 
 		// Use double more precision
-		Double lefOperand = Double.parseDouble(leftOperandTextField.getText());
-		Double rightOperand = Double.parseDouble(rightOperandTextField.getText());
+		Double lefOperand = 0.0;
+		Double rightOperand = 0.0;
 		double computeResult = 0;
 
-			if (event.getSource() == plusButton) {
-				computeResult = lefOperand + rightOperand;
-				ResultTextField.setText(Double.toString(computeResult));
-			} else if (event.getSource() == minusButton) {
-				computeResult = lefOperand - rightOperand;
-				ResultTextField.setText(Double.toString(computeResult));
-			} else if (event.getSource() == multipleButton) {
-				computeResult = lefOperand * rightOperand;
-				ResultTextField.setText(Double.toString(computeResult));
-			} else if (event.getSource() == divisionButton) {
-				computeResult = lefOperand / rightOperand;
-				ResultTextField.setText(Double.toString(computeResult));
-			}
+		if (leftOperandTextField.getText().equals("") && rightOperandTextField.getText().equals("")) {
+			lefOperand = 0.0;
+			rightOperand = 0.0;
+		}else{
+			lefOperand = Double.parseDouble(leftOperandTextField.getText());
+			rightOperand = Double.parseDouble(rightOperandTextField.getText());
+		}
+
+		if (event.getSource() == plusButton) {
+			computeResult = lefOperand + rightOperand;
+			ResultTextField.setText(Double.toString(computeResult));
+		} else if (event.getSource() == minusButton) {
+			computeResult = lefOperand - rightOperand;
+			ResultTextField.setText(Double.toString(computeResult));
+		} else if (event.getSource() == multipleButton) {
+			computeResult = lefOperand * rightOperand;
+			ResultTextField.setText(Double.toString(computeResult));
+		} else if (event.getSource() == divisionButton) {
+			computeResult = lefOperand / rightOperand;
+			ResultTextField.setText(Double.toString(computeResult));
+		}
 
 	}
 

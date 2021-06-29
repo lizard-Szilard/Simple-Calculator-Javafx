@@ -46,7 +46,7 @@
       </GridPane>
       <VBox maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS">
          <children>
-            <TextField fx:id="ResultTextField" alignment="CENTER" editable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="52.0" promptText="Result" VBox.vgrow="ALWAYS" />
+            <TextField fx:id="ResultTextField" alignment="CENTER" editable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="52.0" promptText="0.0" VBox.vgrow="ALWAYS" />
          </children>
          <padding>
             <Insets bottom="14.0" />
