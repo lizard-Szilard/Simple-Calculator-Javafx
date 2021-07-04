@@ -48,7 +48,7 @@ public class FXMLController implements Initializable {
 		Double rightOperand = 0.0;
 		double computeResult = 0;
 
-		if (leftOperandTextField.getText().equals("") && rightOperandTextField.getText().equals("")) {
+		if (leftOperandTextField.getText().equals("") || rightOperandTextField.getText().equals("")) {
 			lefOperand = 0.0;
 			rightOperand = 0.0;
 		}else{
